@@ -1,6 +1,26 @@
+.statusIndicator (@color, @letter) {
+  .text(normal);
+  &.file:after,
+  &.title:after,
+  &.directory > .header > .name:after {
+    content: @letter;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 5px 2px;
+    margin-left: 5px;
+    font-size: 8px;
+    font-weight: bold;
+    background-color: @color;
+    line-height: 0;
+    color: #FFF;
+    text-shadow: 0px 0px 1px darken(@color, 60);
+    border: 1px solid darken(@color, 15);
+  }
+}
+
 .status { .text(normal); }
-.status-added    { .text(success); } // green
+.status-added    { .statusIndicator(@text-color-success, 'A'); } // green
 .status-ignored  { .text(subtle); }  // faded
-.status-modified { .text(warning); } // orange
-.status-removed  { .text(error); }   // red
-.status-renamed  { .text(info); }    // blue
+.status-modified { .statusIndicator(@text-color-warning, 'M'); } // orange
+.status-removed  { .statusIndicator(@text-color-error, 'D'); }   // red
+.status-renamed  { .statusIndicator(@text-color-info, 'R'); }    // blue
