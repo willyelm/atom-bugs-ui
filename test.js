@@ -10,4 +10,4 @@ function Bye (msg) {
 // hello
 Greet('Hello World')
 // bye
-Bye('finish')
+Bye('Bye World')
