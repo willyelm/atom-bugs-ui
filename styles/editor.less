@@ -1,6 +1,6 @@
 atom-text-editor[mini] {
   line-height: @component-line-height;
-  max-height: @component-line-height + 2; // +2 for borders
+  max-height: @component-line-height + 2;
   overflow: auto;
 }
 
@@ -34,6 +34,15 @@ atom-text-editor[mini] {
     background-color: @input-background-color-focus;
     .selection .region {
       background-color: @input-selection-color-focus;
+    }
+  }
+}
+
+atom-text-editor {
+  &::shadow {
+    .bracket-matcher .region {
+      background-color: @text-color-subtle;
+      border-radius: 3px;
     }
   }
 }

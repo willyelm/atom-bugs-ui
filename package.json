@@ -2,7 +2,7 @@
   "name": "atom-bugs-ui",
   "theme": "ui",
   "version": "1.5.0",
-  "description": "Atom One dark UI theme",
+  "description": "Atom Bugs UI theme",
   "keywords": [
     "dark",
     "adaptive",
@@ -15,7 +15,12 @@
     "atom": ">0.40.0"
   },
   "devDependencies": {
-    "coffeelint": "^1.9.7"
+    "babel-eslint": "^6.1.2",
+    "coffeelint": "^1.9.7",
+    "standard": "^7.1.2"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "configSchema": {
     "fontSize": {
@@ -49,6 +54,16 @@
         "Even",
         "Auto",
         "Minimum"
+      ]
+    },
+    "debugBar": {
+      "title": "Debug Bar Position",
+      "description": "choose which position you want to put the debug bar.",
+      "type": "string",
+      "default": "left",
+      "enum": [
+        "left",
+        "right"
       ]
     }
   }

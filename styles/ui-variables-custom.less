@@ -24,11 +24,11 @@
 
 .ui-lightness() when (@ui-s-l <  @ui-inv) {
   @ui-lightness: @ui-s-l + 8%; // increase lightness when too dark
-  @ui-lightness-border: @ui-lightness*.3;
+  @ui-lightness-border: @ui-lightness*.45;
 }
 .ui-lightness() when (@ui-s-l >= @ui-inv) {
   @ui-lightness: min(@ui-s-l, 40%); // limit max lightness (for light syntax themes)
-  @ui-lightness-border: @ui-lightness*.6;
+  @ui-lightness-border: @ui-lightness*.75;
 }
 .ui-lightness();
 
@@ -44,7 +44,7 @@
 // These variables are only used in this theme
 // ----------------------------------------------
 
-@ui-theme-name: one-dark-ui;
+@ui-theme-name: atom-bugs-ui;
 
 // Text (Custom) -----------------
 @text-color-faded: fade(@text-color, 20%);
