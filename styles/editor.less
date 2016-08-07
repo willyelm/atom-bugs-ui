@@ -24,7 +24,7 @@ atom-text-editor[mini] {
     }
     .cursor {
       border-color: @accent-color;
-      border-width: 2px;
+      border-width: 3px;
     }
   }
 
@@ -41,8 +41,10 @@ atom-text-editor[mini] {
 atom-text-editor {
   &::shadow {
     .bracket-matcher .region {
-      background-color: @text-color-subtle;
-      border-radius: 3px;
+      background-color: hsla(@ui-hue, 100%, 66%, 0.5);
+      border: 1px solid @accent-color;
+      border-radius: 2px;
+      padding: 3px;
     }
   }
 }
